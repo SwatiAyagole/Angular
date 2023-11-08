@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<style>
+  @keyframes changeShape{
+    from{
+      background-color: #9b2a32;
+
+      width: 100px;
+    }
+    to{
+      
+      width: 100px;
+      background-color: green;
+      border-radius: 50%;
+    }
+  }
+  div {
+    background-color: #9b2a32;
+    height: 100px;
+  }
+
+div.ng-hide {
+  animation-name: changeShape;
+  animation-duration: 10000ms;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+
+<body ng-app="myApp">
+
+<h1>Hide the DIV: <input type="checkbox" ng-model="myCheck"></h1>
+
+<div ng-hide="myCheck"></div>
+
+<script>
+var app = angular.module('myApp', ['ngAnimate']);
+</script>
+
+</body>
+</html>
